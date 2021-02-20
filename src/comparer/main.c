@@ -38,8 +38,8 @@ int main(int argc, char *argv[]) {
     bool equal = true;
     int n = 0;
     UCHAR r1, r2, b1, b2, g1, g2;
-    for (int i = 0; i < BMP_GetHeight(file_1); i++) {
-        for (int j = 0; j < BMP_GetWidth(file_1); j++) {
+    for (UINT i = 0; i < BMP_GetHeight(file_1); i++) {
+        for (UINT j = 0; j < BMP_GetWidth(file_1); j++) {
             BMP_GetPixelRGB(file_1, j, i, &r1, &g1, &b1);
             BMP_GetPixelRGB(file_2, j, i, &r2, &g2, &b2);
             if (r1 != r2 || g1 != g2 || b1 != b2) {
