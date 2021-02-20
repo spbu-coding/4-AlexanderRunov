@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
             BMP_GetPixelRGB(file_2, j, i, &r2, &g2, &b2);
             if (r1 != r2 || g1 != g2 || b1 != b2) {
                 equal = false;
-                printf("%d %d\n", j, i);
+                printf("%lu %lu\n", j, i);
                 n++;
                 if (n == 100) {
                     BMP_Free(file_1);
