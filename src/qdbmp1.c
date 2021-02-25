@@ -1,4 +1,4 @@
-#include "qdbmp.h"
+#include "qdbmp1.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -273,12 +273,7 @@ void BMP_GetPixelRGB( BMP* bmp, UINT x, UINT y, UCHAR* r, UCHAR* g, UCHAR* b )
 	UINT	bytes_per_row;
 	UCHAR	bytes_per_pixel;
 
-	if ( bmp == NULL || x < 0 || x >= bmp->Header.Width || y < 0 || y >= bmp->Header.Height )
-	{
-		BMP_LAST_ERROR_CODE = BMP_INVALID_ARGUMENT;
-	}
-	else
-	{
+	
 		BMP_LAST_ERROR_CODE = BMP_OK;
 
 		bytes_per_pixel = bmp->Header.BitsPerPixel >> 3;
@@ -300,7 +295,7 @@ void BMP_GetPixelRGB( BMP* bmp, UINT x, UINT y, UCHAR* r, UCHAR* g, UCHAR* b )
 		if ( r )	*r = *( pixel + 2 );
 		if ( g )	*g = *( pixel + 1 );
 		if ( b )	*b = *( pixel + 0 );
-	}
+
 }
 
 
