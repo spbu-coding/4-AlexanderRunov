@@ -75,7 +75,7 @@ int		ReadUSHORT	( USHORT *x, FILE* f );
 /**************************************************************
 	Frees all the memory used by the specified BMP image.
 **************************************************************/
-void BMP_Free( BMP* bmp )
+void bmpFree(BMP* bmp )
 {
 	if ( bmp == NULL )
 	{
@@ -101,7 +101,7 @@ void BMP_Free( BMP* bmp )
 /**************************************************************
 	Reads the specified BMP image file.
 **************************************************************/
-BMP* BMP_ReadFile( const char* filename )
+BMP* bmpReadFile(const char* filename )
 {
 	BMP*	bmp;
 	FILE*	f;
@@ -215,7 +215,7 @@ BMP* BMP_ReadFile( const char* filename )
 /**************************************************************
 	Returns the image's width.
 **************************************************************/
-UINT BMP_GetWidth( BMP* bmp )
+UINT bmpGetWidth(BMP* bmp )
 {
 	if ( bmp == NULL )
 	{
@@ -232,7 +232,7 @@ UINT BMP_GetWidth( BMP* bmp )
 /**************************************************************
 	Returns the image's height.
 **************************************************************/
-UINT BMP_GetHeight( BMP* bmp )
+UINT bmpGetHeight(BMP* bmp )
 {
 	if ( bmp == NULL )
 	{
@@ -249,7 +249,7 @@ UINT BMP_GetHeight( BMP* bmp )
 /**************************************************************
 	Returns the image's color depth (bits per pixel).
 **************************************************************/
-USHORT BMP_GetDepth( BMP* bmp )
+USHORT bmpGetDepth(BMP* bmp )
 {
 	if ( bmp == NULL )
 	{
@@ -267,13 +267,13 @@ USHORT BMP_GetDepth( BMP* bmp )
 	Populates the arguments with the specified pixel's RGB
 	values.
 **************************************************************/
-void BMP_GetPixelRGB( BMP* bmp, UINT x, UINT y, UCHAR* r, UCHAR* g, UCHAR* b )
+void bmpGetPixelRgb(BMP* bmp, UINT x, UINT y, UCHAR* r, UCHAR* g, UCHAR* b )
 {
 	UCHAR*	pixel;
 	UINT	bytes_per_row;
 	UCHAR	bytes_per_pixel;
 
-	
+
 		BMP_LAST_ERROR_CODE = BMP_OK;
 
 		bytes_per_pixel = bmp->Header.BitsPerPixel >> 3;

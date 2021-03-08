@@ -89,21 +89,21 @@ typedef struct _BMP BMP;
 /*********************************** Public methods **********************************/
 
 
-void			BMP_Free					( BMP* bmp );
+void			bmpFree					(BMP* bmp );
 
 
 /* I/O */
-BMP*			BMP_ReadFile				( const char* filename );
+BMP*			bmpReadFile				(const char* filename );
 
 
 /* Meta info */
-UINT			BMP_GetWidth				( BMP* bmp );
-UINT			BMP_GetHeight				( BMP* bmp );
-USHORT			BMP_GetDepth				( BMP* bmp );
+UINT			bmpGetWidth				(BMP* bmp );
+UINT			bmpGetHeight				(BMP* bmp );
+USHORT			bmpGetDepth				(BMP* bmp );
 
 
 /* Pixel access */
-void			BMP_GetPixelRGB				( BMP* bmp, UINT x, UINT y, UCHAR* r, UCHAR* g, UCHAR* b );
+void			bmpGetPixelRgb				(BMP* bmp, UINT x, UINT y, UCHAR* r, UCHAR* g, UCHAR* b );
 
 void			BMP_GetPixelIndex			( BMP* bmp, UINT x, UINT y, UCHAR* val );
 
