@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include "qdbmp.h"
-#include "qdbmp.c"
 
 
 typedef struct {
