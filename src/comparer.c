@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "qdbmp1.h"
-#include "qdbmp1.c"
 
 int main(int argc, char *argv[]) {
     if (argc < 3) {
